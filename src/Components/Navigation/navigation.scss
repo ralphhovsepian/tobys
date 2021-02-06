@@ -1,0 +1,138 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  padding: 0 30px;
+  justify-content: space-between;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+
+  .header:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  .left {
+    display: inline-flex;
+    align-items: center;
+
+    .items {
+      height: 100%;
+      text-decoration: none;
+      list-style-type: none;
+      display: inline-flex;
+
+      li {
+        align-self: center;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+
+      li:hover {
+        border-bottom: 2px solid #141414;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  .right {
+    display: inline-flex;
+    align-items: center;
+
+    .items {
+      height: 100%;
+      text-decoration: none;
+      list-style-type: none;
+      display: inline-flex;
+      align-items: center;
+
+      .search {
+        height: 50%;
+        border: 0;
+        background-color: rgba(0,0,0,.1);
+        border-radius: 50px;
+        outline: none;
+      }
+
+      .search::placeholder {
+        padding: 10px;
+      }
+
+      .search:focus {
+        padding-right: 50%;
+      }
+
+      span {
+        margin-left: 10px;
+        height: 50px;
+        width: 50px;
+        display: inline-block;
+        cursor: pointer;
+
+        img {
+          width: 50%;
+          height: 50%;
+          position: relative;
+          top: 25%;
+          left: 25%;
+        }
+      }
+
+      span:hover {
+        background-color: rgba(0,0,0,.1);
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
+.mobile-navigation {
+  display: none;
+}
+@media screen and (max-width: 1023px) {
+  .navigation {
+    .left,
+    .right {
+      display: none;
+    }
+  }
+
+  .mobile-navigation {
+    display: flex;
+    flex-direction: row;
+    padding: 0 30px;
+    justify-content: space-between;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+
+    .right {
+      align-self: center;
+
+      .items {
+        height: 100%;
+        text-decoration: none;
+        list-style-type: none;
+        display: inline-flex;
+        align-items: center;
+
+        span {
+          margin-left: 10px;
+          height: 50px;
+          width: 50px;
+          display: inline-block;
+          cursor: pointer;
+
+          img {
+            width: 50%;
+            height: 50%;
+            position: relative;
+            top: 25%;
+            left: 25%;
+          }
+        }
+
+        span:hover {
+          background-color: rgba(0,0,0,.1);
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+}
