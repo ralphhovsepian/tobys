@@ -1,0 +1,46 @@
+.SideOptionsDiv {
+  width: 25%;
+  height: 100%;
+  position: absolute;
+
+
+
+  .Types {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .range {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+.ColorPicker {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .color {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .blue {
+    background-color: blue;
+  }
+  .red {
+    background-color: red;
+  }
+  .green {
+    background-color: green;
+  }
+  .black {
+    background-color: black;
+  }
+  .orange {
+    background-color: orange;
+  }
+}
+}

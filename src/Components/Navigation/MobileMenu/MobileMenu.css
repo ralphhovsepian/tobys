@@ -1,0 +1,1 @@
+.MobileMenuDiv{left:0;width:100%;background-color:#f5f5f5;height:50%;position:absolute}.MobileMenuDiv .search{height:10%;width:90%;border:1px solid #ccc;background-color:rgba(0,0,0,0.1);border-radius:50px;outline:none;margin-top:5%;margin-left:5%}.MobileMenuDiv .search::placeholder{padding:10px}.MobileMenuDiv .items{list-style:none}.MobileMenuDiv .items li{margin-top:30px}

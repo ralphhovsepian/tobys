@@ -4,11 +4,14 @@ import user from './../Assets/user.svg';
 import cart from './../Assets/cart.svg';
 import menu from './../Assets/menu.svg';
 
+import MobileMenu from './MobileMenu/MobileMenu';
+import SideMenu from './SideMenu/SideMenu';
+
 const Navigation = (props) => {
 
 
   return(
-    <>
+    <div>
     <nav className="navigation">
 
       <div className="left">
@@ -42,7 +45,10 @@ const Navigation = (props) => {
         </div>
       </div>
     </nav>
-    </>
+
+
+
+    </div>
   )
 
 }
