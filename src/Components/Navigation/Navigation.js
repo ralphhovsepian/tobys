@@ -4,10 +4,23 @@ import user from './../Assets/user.svg';
 import cart from './../Assets/cart.svg';
 import menu from './../Assets/menu.svg';
 
+import {faUser} from "@fortawesome/free-solid-svg-icons";
+import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import MobileMenu from './MobileMenu/MobileMenu';
 import SideMenu from './SideMenu/SideMenu';
 
+//redux
+import {useSelector, useDispatch} from 'react-redux';
+import {toggleNav} from './../../redux/reducers/mainReducer.js';
+
+
 const Navigation = (props) => {
+
+  const toggleNavBar = useSelector(state => state.toggleNavBar);
+  const dispatch = useDispatch();
+
 
 
   return(
@@ -26,8 +39,8 @@ const Navigation = (props) => {
       <div className="right">
       <div className="items">
       <input type="text" value="" placeholder="Search" className="search"/>
-        <span><img src={cart}/></span>
-        <span><img src={user}/></span>
+      <span><FontAwesomeIcon icon={faShoppingCart} size="2x" color="#292929"/></span>
+        <span><FontAwesomeIcon icon={faUser} size="2x" color="#292929"/></span>
       </div>
       </div>
 
@@ -41,12 +54,12 @@ const Navigation = (props) => {
         <div className="items">
           <span><img src={cart}/></span>
           <span><img src={user}/></span>
-          <span><img src={menu}/></span>
+          <span onClick={() => dispatch(toggleNav())}><img src={menu}/></span>
         </div>
       </div>
     </nav>
 
-
+    {toggleNavBar && <MobileMenu/>}
 
     </div>
   )

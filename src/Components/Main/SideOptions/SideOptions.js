@@ -1,13 +1,18 @@
 import {useEffect, useState} from 'react';
 import './SideOptions.css';
-
+import {faFilter} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {useDispatch, useSelector} from 'react-redux';
+import {toggleFilter} from './../../../redux/reducers/mainReducer.js';
 const SideOptions = (props) => {
 
+const dispatch = useDispatch();
 
   return(
+    <>
     <div className="SideOptionsDiv">
 
-    <div>
+    <div className="standard">
       <h2 className="Title">Filter</h2>
       <div className="Types">
           <p>Sneakers</p>
@@ -20,8 +25,8 @@ const SideOptions = (props) => {
       <div>
         <h2 className="Title">Price Range</h2>
         <div className="range">
-        <label for="from">From</label><input type="range" id="from" name="from" min="0" max="11"/>
-        <label for="to">To</label><input type="range" id="to" name="to" min="0" max="11"/>
+        <label for="from">From</label><input type="number" id="from" placeholder="From" name="from" min="0" max="11"/>
+        <label for="to">To</label><input type="number" id="to" placeholder="To" name="to" min="0" max="11"/>
         </div>
         </div>
 
@@ -38,6 +43,10 @@ const SideOptions = (props) => {
           </div>
 
     </div>
+    <div className="mobile" onClick={() => dispatch(toggleFilter())}>
+      <span><FontAwesomeIcon icon={faFilter} size="lg" color="white"/></span>
+    </div>
+    </>
   )
 
 }

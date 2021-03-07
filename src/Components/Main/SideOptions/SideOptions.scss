@@ -1,9 +1,10 @@
+.mobile {
+  display: none;
+}
+
 .SideOptionsDiv {
   width: 25%;
   height: 100%;
-  position: absolute;
-
-
 
   .Types {
     display: flex;
@@ -13,34 +14,73 @@
   .range {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
+    input {
+      border: 0;
+      border-radius: 2px;
+      background-color: #ccc;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    input:focus {
+      outline: none;
+    }
   }
 
-.ColorPicker {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  .color {
-    margin-left: 10px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50px;
-    cursor: pointer;
-  }
-  .blue {
-    background-color: blue;
-  }
-  .red {
-    background-color: red;
-  }
-  .green {
-    background-color: green;
-  }
-  .black {
-    background-color: black;
-  }
-  .orange {
-    background-color: orange;
+  .ColorPicker {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .color {
+      margin-left: 10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .black {
+      background-color: black;
+    }
+
+    .orange {
+      background-color: orange;
+    }
   }
 }
+
+
+@media only screen and(max-width: 800px) {
+  .SideOptionsDiv {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1B1B1B;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    cursor: pointer;
+    border-radius: 2px;
+    span {
+      display: flex;
+       justify-content: center;
+       margin-top: 15px;
+    }
+  }
 }

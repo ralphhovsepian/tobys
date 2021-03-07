@@ -1,0 +1,26 @@
+.Item {
+  margin: 20px;
+.content {
+      width: 200px;
+      height: 200px;
+      background-color: #D6CE93;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  img {
+    width: 75%;
+    height: 100%;
+  }
+
+}
+.content:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+.contentTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+}

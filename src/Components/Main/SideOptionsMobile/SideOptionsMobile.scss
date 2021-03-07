@@ -1,0 +1,101 @@
+.SideOptionsMobileDiv {
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  height: 800px;
+  max-height: max-content;
+  h1 {
+    text-align: center;
+  }
+
+  .Types {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .Type {
+      background-color: #292929;
+      cursor: pointer;
+      width: 100px;
+      color: #fff;
+      border-radius: 2px;
+      h4 {
+        text-align: center;
+      }
+    }
+  }
+
+  .PriceRange {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      margin-top: 50px;
+    }
+
+    input {
+      margin-top: 50px;
+      height: 50px;
+      width: 90%;
+      align-self: center;
+      border: 2px solid #ccc;
+      border-radius: 2px;
+    }
+    input:focus {
+      outline: none;
+    }
+  }
+.ColorContainer {
+
+  .ColorPicker {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    .color {
+      margin-left: 10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .black {
+      background-color: black;
+    }
+
+    .orange {
+      background-color: orange;
+    }
+  }
+}
+button {
+  border: 0;
+  width: 50%;
+  height: 50px;
+  margin-top: 50px;
+  align-self: center;
+  background-color: #292929;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  font-weight: bold;
+}
+}
