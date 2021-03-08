@@ -1,15 +1,15 @@
 .Item {
   margin: 20px;
 .content {
-      width: 200px;
+      width: 180px;
       height: 200px;
-      background-color: #D6CE93;
       border-radius: 2px;
+      border: 2px solid #c1c1c1;
       display: flex;
       flex-direction: column;
       align-items: center;
   img {
-    width: 75%;
+    width: 100%;
     height: 100%;
   }
 

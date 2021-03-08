@@ -25,8 +25,8 @@ const dispatch = useDispatch();
       <div>
         <h2 className="Title">Price Range</h2>
         <div className="range">
-        <label for="from">From</label><input type="number" id="from" placeholder="From" name="from" min="0" max="11"/>
-        <label for="to">To</label><input type="number" id="to" placeholder="To" name="to" min="0" max="11"/>
+        <label htmlFor="from">From</label><input type="number" id="from" placeholder="From" name="from" min="0" max="11"/>
+        <label htmlFor="to">To</label><input type="number" id="to" placeholder="To" name="to" min="0" max="11"/>
         </div>
         </div>
 

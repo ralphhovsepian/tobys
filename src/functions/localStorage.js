@@ -7,5 +7,5 @@ export const unsetUser = () => {
 }
 
 export const getUser = () => {
-  localStorage.getItem('user');
+  return localStorage.getItem('user');
 }

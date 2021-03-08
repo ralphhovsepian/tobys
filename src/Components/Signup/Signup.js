@@ -22,9 +22,9 @@ const dispatch = useDispatch();
 
         <div className="SignupDiv">
           <h3>Create an account:</h3>
-          <label for="email">Email Address:</label>
+          <label htmlFor="email">Email Address:</label>
           <input type="email" id="email" name="email" value={user.username} onChange={(e) => dispatch(inputChange(e.target.value))}/>
-          <label for="password">Password:</label>
+          <label htmlFor="password">Password:</label>
           <input type="password" id="password" name="password" value={user.password} onChange={(e) => dispatch(passwordChange(e.target.value))}/>
           {error && <p className="Error">The username/password must be at least 6 characters</p>}
           {loader && <Loader/>}

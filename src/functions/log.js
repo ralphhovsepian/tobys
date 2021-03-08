@@ -1,6 +1,7 @@
 import axios from 'axios';
 import store from './../redux/store';
 import {logLoad, errorToggle} from './../redux/reducers/mainReducer';
+import {getProducts} from './../redux/reducers/productReducer';
 import {setUser, unsetUser, getUser} from './localStorage';
 
 export const create = async (username, password) => {
@@ -52,4 +53,18 @@ export const login = async (username, password) => {
   }
 
   store.dispatch(logLoad());
+}
+
+
+export const logout = () => {
+  unsetUser();
+  window.location.href = '/';
+}
+
+export const getProductsInfo = async () => {
+  const response = await axios.get('http://localhost:3001/');
+
+  if(response.data) {
+      store.dispatch(getProducts(response.data));
+  }
 }

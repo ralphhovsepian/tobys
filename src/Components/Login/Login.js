@@ -20,9 +20,9 @@ const dispatch = useDispatch();
 
         <div className="LoginDiv">
           <h3>Login</h3>
-          <label for="email">Email Address:</label>
+          <label htmlFor="email">Email Address:</label>
           <input type="email" id="email" name="email" value={user.username} onChange={(e) => dispatch(inputChange(e.target.value))}/>
-          <label for="password">Password:</label>
+          <label htmlFor="password">Password:</label>
           <input type="password" id="password" name="password" value={user.password} onChange={(e) => dispatch(passwordChange(e.target.value))}/>
           {error && <p className="Error">Wrong username/password</p>}
           {loader && <Loader/>}
