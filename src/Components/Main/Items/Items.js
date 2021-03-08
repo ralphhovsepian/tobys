@@ -19,6 +19,8 @@ const products = useSelector(state => state.products);
             name={product.name}
             price={product.price}
             url={product.url}
+            sizes={product.sizes}
+            type={product.type}
           />
         )
       })

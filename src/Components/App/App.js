@@ -3,7 +3,7 @@ import Navigation from './../Navigation/Navigation';
 import Main from './../Main/Main';
 import Footer from './../Footer/Footer';
 import {useSelector, useDispatch} from 'react-redux';
-import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link, Switch, Redirect} from 'react-router-dom';
 import './App.css';
 import Login from './../Login/Login';
 import Signup from './../Signup/Signup';
@@ -15,7 +15,10 @@ import {userInfo} from './../../redux/reducers/infoReducer';
 function App() {
 
 const toggleFilter = useSelector(state => state.toggleFilter)
+const userInformation = useSelector(state => state.userInfo)
 const dispatch = useDispatch();
+
+console.log(userInformation);
 
 useEffect(() => {
   const user = getUser();
@@ -40,11 +43,17 @@ useEffect(() => {
       </Route>
 
       <Route exact path="/login">
-        <Login/>
+      {
+        userInformation ? <Redirect to="/"/>:<Login/>
+      }
       </Route>
 
+
       <Route exact path="/create">
-        <Signup/>
+      {
+        userInformation ? <Redirect to="/"/>:<Signup/>
+      }
+
       </Route>
 
       </>

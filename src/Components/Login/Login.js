@@ -12,7 +12,10 @@ const Login = () => {
 const user = useSelector(state => state.logReducer);
 const loader = useSelector(state => state.toggleLoader);
 const error = useSelector(state => state.toggleError);
+
 const dispatch = useDispatch();
+
+
 
   return(
     <div className="ContainerLogin">
@@ -20,8 +23,8 @@ const dispatch = useDispatch();
 
         <div className="LoginDiv">
           <h3>Login</h3>
-          <label htmlFor="email">Email Address:</label>
-          <input type="email" id="email" name="email" value={user.username} onChange={(e) => dispatch(inputChange(e.target.value))}/>
+          <label htmlFor="email">Username:</label>
+          <input type="text" id="email" name="email" value={user.username} onChange={(e) => dispatch(inputChange(e.target.value))}/>
           <label htmlFor="password">Password:</label>
           <input type="password" id="password" name="password" value={user.password} onChange={(e) => dispatch(passwordChange(e.target.value))}/>
           {error && <p className="Error">Wrong username/password</p>}
