@@ -1,6 +1,5 @@
 import {useEffect, useState} from 'react';
 import './Item.css';
-import shoe1 from './../../../Assets/shoe1.png';
 
 const Item = (props) => {
 
