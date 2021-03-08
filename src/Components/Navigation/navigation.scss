@@ -100,7 +100,6 @@
 
         span {
           margin-left: 10px;
-          height: 50px;
           width: 50px;
           display: inline-block;
           cursor: pointer;
@@ -114,10 +113,6 @@
           }
         }
 
-        span:hover {
-          background-color: rgba(0,0,0,.1);
-          border-radius: 50px;
-        }
       }
     }
   }

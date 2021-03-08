@@ -1,15 +1,12 @@
 import {useEffect, useState} from 'react';
 import './navigation.css';
-import user from './../Assets/user.svg';
-import cart from './../Assets/cart.svg';
-import menu from './../Assets/menu.svg';
 
 import {faUser} from "@fortawesome/free-solid-svg-icons";
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+import {faBars} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import MobileMenu from './MobileMenu/MobileMenu';
-import SideMenu from './SideMenu/SideMenu';
 
 //redux
 import {useSelector, useDispatch} from 'react-redux';
@@ -52,9 +49,9 @@ const Navigation = (props) => {
 
       <div className="right">
         <div className="items">
-          <span><img src={cart}/></span>
-          <span><img src={user}/></span>
-          <span onClick={() => dispatch(toggleNav())}><img src={menu}/></span>
+          <span><FontAwesomeIcon icon={faShoppingCart} size="2x" color="#292929"/></span>
+          <span><FontAwesomeIcon icon={faUser} size="2x" color="#292929"/></span>
+          <span onClick={() => dispatch(toggleNav())}>  <span><FontAwesomeIcon icon={faBars} size="2x" color="#292929"/></span></span>
         </div>
       </div>
     </nav>
