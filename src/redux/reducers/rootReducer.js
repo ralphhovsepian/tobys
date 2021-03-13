@@ -1,8 +1,13 @@
 import { combineReducers } from 'redux';
-import {toggleNavBar, toggleFilterOption, logLoader, toggleError} from './mainReducer';
-import {inputChanger} from './logReducer';
-import {userInfoSetter} from './infoReducer';
-import {productsGetter} from './productReducer';
+import {
+  toggleNavBar,
+  toggleFilterOption,
+  logLoader,
+  toggleError,
+} from './mainReducer';
+import { inputChanger } from './logReducer';
+import { userInfoSetter } from './infoReducer';
+import { productsGetter } from './productReducer';
 
 const rootReducer = combineReducers({
   toggleNavBar: toggleNavBar,
@@ -11,7 +16,7 @@ const rootReducer = combineReducers({
   logReducer: inputChanger,
   toggleError: toggleError,
   userInfo: userInfoSetter,
-  products: productsGetter
-})
+  products: productsGetter,
+});
 
-export default  rootReducer;
+export default rootReducer;

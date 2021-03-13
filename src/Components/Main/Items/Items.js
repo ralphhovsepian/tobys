@@ -1,17 +1,14 @@
-import {useEffect, useState} from 'react';
 import './Items.css';
 import Item from './Item/Item';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const Items = (props) => {
+  const products = useSelector((state) => state.products);
 
-const products = useSelector(state => state.products);
-
-  return(
-    <div className="Items">
-    {
-      products.map((product) => {
-        return(
+  return (
+    <div className='Items'>
+      {products.map((product) => {
+        return (
           <Item
             colors={product.colors}
             description={product.description}
@@ -22,12 +19,10 @@ const products = useSelector(state => state.products);
             sizes={product.sizes}
             type={product.type}
           />
-        )
-      })
-    }
+        );
+      })}
     </div>
-  )
-
-}
+  );
+};
 
 export default Items;
