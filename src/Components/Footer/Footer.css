@@ -1,1 +1,74 @@
-.Footer{width:100%;background-color:#1B1B1B;min-height:250px;max-height:max-content;display:flex;flex-direction:row;justify-content:space-between;color:#fff;flex-wrap:wrap-reverse}.Footer div{width:20%;margin-left:100px}.Footer .newsletter form input{width:100%;height:15%}.Footer .newsletter form input:focus{outline:none}.Footer .newsletter form button{margin-top:10px;width:50%;border:0;background-color:#F24236;color:#fff;height:30px;border-radius:4px;cursor:pointer}.Footer .newsletter form button:focus{outline:none;border:none}.Footer .workingHours p{font-style:italic}.Footer .workingHours span{padding:10px}@media only screen and (max-width: 800px){.Footer{text-align:center}.Footer div{margin:0 auto;margin-top:50px;width:70%}}
+.Footer {
+  width: 100%;
+  background-color: #1b1b1b;
+  min-height: 250px;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.Footer div {
+  width: 20%;
+  margin-left: 100px;
+}
+
+.Footer .newsletter {
+  margin-bottom: 20px;
+}
+
+.Footer .newsletter form input {
+  width: 100%;
+  height: 15%;
+}
+
+.Footer .newsletter form input:focus {
+  outline: none;
+}
+
+.Footer .newsletter form button {
+  margin-top: 10px;
+  width: 50%;
+  border: 0;
+  background-color: #f24236;
+  color: #fff;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Footer .newsletter form button:focus {
+  outline: none;
+  border: none;
+}
+
+.Footer .workingHours p {
+  font-style: italic;
+}
+
+.Footer .workingHours span {
+  padding: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+  .Footer {
+    text-align: center;
+  }
+  .Footer div {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 70%;
+  }
+}

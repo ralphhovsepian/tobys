@@ -9,12 +9,16 @@
   .Types {
     display: flex;
     flex-direction: column;
+    width: 150px;
+    p {
+      cursor: pointer;
+    }
   }
 
   .range {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 120px;
     input {
       border: 2px solid #c1c1c1;
       border-radius: 2px;
@@ -38,6 +42,7 @@
       height: 20px;
       border-radius: 50px;
       cursor: pointer;
+      margin: 10px;
     }
 
     .blue {
@@ -56,14 +61,13 @@
       background-color: black;
     }
 
-    .orange {
-      background-color: orange;
+    .yellow {
+      background-color: yellow;
     }
   }
 }
 
-
-@media only screen and(max-width: 800px) {
+@media only screen and(max-width: 1020px) {
   .SideOptionsDiv {
     display: none;
   }
@@ -71,7 +75,7 @@
     display: block;
     width: 50px;
     height: 50px;
-    background-color: #1B1B1B;
+    background-color: #1b1b1b;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -79,8 +83,8 @@
     border-radius: 2px;
     span {
       display: flex;
-       justify-content: center;
-       margin-top: 15px;
+      justify-content: center;
+      margin-top: 15px;
     }
   }
 }

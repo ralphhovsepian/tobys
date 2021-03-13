@@ -1,6 +1,6 @@
 .Footer {
   width: 100%;
-  background-color: #1B1B1B;
+  background-color: #1b1b1b;
   min-height: 250px;
   max-height: max-content;
   display: flex;
@@ -8,13 +8,13 @@
   justify-content: space-between;
   color: #fff;
   flex-wrap: wrap-reverse;
-
   div {
     width: 20%;
     margin-left: 100px;
   }
 
   .newsletter {
+    margin-bottom: 20px;
     form {
       input {
         width: 100%;
@@ -29,7 +29,7 @@
         margin-top: 10px;
         width: 50%;
         border: 0;
-        background-color: #F24236;
+        background-color: #f24236;
         color: #fff;
         height: 30px;
         border-radius: 4px;
@@ -48,8 +48,7 @@
       font-style: italic;
     }
     span {
-
-    padding: 10px;
+      padding: 10px;
     }
   }
 }

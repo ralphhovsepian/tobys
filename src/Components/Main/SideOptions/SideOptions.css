@@ -1,1 +1,113 @@
-.mobile{display:none}.SideOptionsDiv{width:25%;height:100%}.SideOptionsDiv .Types{display:flex;flex-direction:column}.SideOptionsDiv .range{display:flex;flex-direction:column;width:100%}.SideOptionsDiv .range input{border:2px solid #c1c1c1;border-radius:2px;height:30px;margin-top:10px;margin-bottom:10px}.SideOptionsDiv .range input:focus{outline:none}.SideOptionsDiv .ColorPicker{display:flex;flex-direction:row;flex-wrap:wrap}.SideOptionsDiv .ColorPicker .color{margin-left:10px;width:20px;height:20px;border-radius:50px;cursor:pointer}.SideOptionsDiv .ColorPicker .blue{background-color:blue}.SideOptionsDiv .ColorPicker .red{background-color:red}.SideOptionsDiv .ColorPicker .green{background-color:green}.SideOptionsDiv .ColorPicker .black{background-color:black}.SideOptionsDiv .ColorPicker .orange{background-color:orange}@media only screen and (max-width: 800px){.SideOptionsDiv{display:none}.mobile{display:block;width:50px;height:50px;background-color:#1B1B1B;position:fixed;z-index:1;left:0;cursor:pointer;border-radius:2px}.mobile span{display:flex;justify-content:center;margin-top:15px}}
+.mobile {
+  display: none;
+}
+
+.SideOptionsDiv {
+  width: 25%;
+  height: 100%;
+}
+
+.SideOptionsDiv .Types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 150px;
+}
+
+.SideOptionsDiv .Types p {
+  cursor: pointer;
+}
+
+.SideOptionsDiv .range {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 120px;
+}
+
+.SideOptionsDiv .range input {
+  border: 2px solid #c1c1c1;
+  border-radius: 2px;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.SideOptionsDiv .range input:focus {
+  outline: none;
+}
+
+.SideOptionsDiv .ColorPicker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.SideOptionsDiv .ColorPicker .color {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.SideOptionsDiv .ColorPicker .blue {
+  background-color: blue;
+}
+
+.SideOptionsDiv .ColorPicker .red {
+  background-color: red;
+}
+
+.SideOptionsDiv .ColorPicker .green {
+  background-color: green;
+}
+
+.SideOptionsDiv .ColorPicker .black {
+  background-color: black;
+}
+
+.SideOptionsDiv .ColorPicker .yellow {
+  background-color: yellow;
+}
+
+@media only screen and (max-width: 1020px) {
+  .SideOptionsDiv {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1b1b1b;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .mobile span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 15px;
+  }
+}

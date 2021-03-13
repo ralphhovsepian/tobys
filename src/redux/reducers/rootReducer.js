@@ -7,7 +7,7 @@ import {
 } from './mainReducer';
 import { inputChanger } from './logReducer';
 import { userInfoSetter } from './infoReducer';
-import { productsGetter } from './productReducer';
+import { productsGetter, productSearcher, filterItems } from './productReducer';
 
 const rootReducer = combineReducers({
   toggleNavBar: toggleNavBar,
@@ -17,6 +17,8 @@ const rootReducer = combineReducers({
   toggleError: toggleError,
   userInfo: userInfoSetter,
   products: productsGetter,
+  search: productSearcher,
+  filter: filterItems,
 });
 
 export default rootReducer;

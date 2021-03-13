@@ -14,11 +14,15 @@ export const create = async (username, password) => {
       username: username,
       password: password,
     });
-    const response = await axios.post('http://localhost:3001/create', user, {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const response = await axios.post(
+      `${process.env.REACT_APP_REQUEST_LINK}/create`,
+      user,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
     if (response.data) {
       login(username, password);
       store.dispatch(errorToggle(false));
@@ -37,11 +41,15 @@ export const login = async (username, password) => {
     password: password,
   });
 
-  const response = await axios.post('http://localhost:3001/login', user, {
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+  const response = await axios.post(
+    `${process.env.REACT_APP_REQUEST_LINK}/login`,
+    user,
+    {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+  );
 
   if (response.data) {
     setUser(response.data);
@@ -60,7 +68,7 @@ export const logout = () => {
 };
 
 export const getProductsInfo = async () => {
-  const response = await axios.get('http://localhost:3001/');
+  const response = await axios.get(`${process.env.REACT_APP_REQUEST_LINK}`);
 
   if (response.data) {
     store.dispatch(getProducts(response.data));

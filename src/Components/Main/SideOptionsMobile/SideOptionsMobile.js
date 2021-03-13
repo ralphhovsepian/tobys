@@ -1,43 +1,80 @@
 import './SideOptionsMobile.css';
+import {
+  filterType,
+  filterFromPrice,
+  filterToPrice,
+  filterColor,
+} from './../../../redux/reducers/productReducer.js';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleFilter } from './../../../redux/reducers/mainReducer.js';
 
 const SideOptionsMobile = (props) => {
+  const priceFrom = useSelector((state) => state.filter.price.from);
+  const priceTo = useSelector((state) => state.filter.price.to);
+  const color = useSelector((state) => state.filter.color);
+  const typesFilter = useSelector((state) => state.filter.type);
+  const dispatch = useDispatch();
+  const types = ['sneakers', 'sport', 'everyday', 'casual'];
+  const colorList = ['blue', 'red', 'green', 'black', 'yellow'];
+
   return (
     <div className='SideOptionsMobileDiv'>
       <h1>Filter</h1>
 
       <div className='Types'>
-        <div className='Type'>
-          <h4>Sneakers</h4>
-        </div>
-        <div className='Type'>
-          <h4>Sports</h4>
-        </div>
-        <div className='Type'>
-          <h4>Everyday</h4>
-        </div>
-        <div className='Type'>
-          <h4>Casual</h4>
-        </div>
+        {types.map((type) => {
+          return (
+            <div
+              className='Type'
+              onClick={() => dispatch(filterType(type))}
+              style={{
+                backgroundColor: typesFilter.includes(type)
+                  ? '#292929'
+                  : 'unset',
+                color: typesFilter.includes(type) ? '#fff' : '#1b1b1b',
+                padding: typesFilter.includes(type) ? 5 : 0,
+              }}
+            >
+              <h4>{type}</h4>
+            </div>
+          );
+        })}
       </div>
 
       <div className='PriceRange'>
         <h1>Price Range</h1>
-        <input type='number' placeholder='From' />
-        <input type='number' placeholder='To' />
+        <input
+          value={priceFrom}
+          type='number'
+          placeholder='From'
+          onChange={(e) => dispatch(filterFromPrice(e.target.value))}
+        />
+        <input
+          value={priceTo}
+          type='number'
+          placeholder='To'
+          onChange={(e) => dispatch(filterToPrice(e.target.value))}
+        />
       </div>
 
       <div className='ColorContainer'>
         <h1>Colors</h1>
         <div className='ColorPicker'>
-          <div className='color blue'></div>
-          <div className='color red'></div>
-          <div className='color green'></div>
-          <div className='color black'></div>
-          <div className='color orange'></div>
+          {colorList.map((clr) => {
+            return (
+              <div
+                className={`color ${clr}`}
+                onClick={() => dispatch(filterColor(clr))}
+                style={{
+                  border: color.includes(clr) ? '1px solid black' : 'unset',
+                }}
+              ></div>
+            );
+          })}
         </div>
       </div>
 
-      <button>Apply</button>
+      <button onClick={() => dispatch(toggleFilter())}>Apply</button>
     </div>
   );
 };

@@ -38,20 +38,20 @@ function App() {
             <SideOptionsMobile />
           ) : (
             <>
-              <Route exact path='/'>
-                <>
-                  <Navigation />
-                  <Main />
-                  <Footer />
-                </>
-              </Route>
-
               <Route exact path='/login'>
                 {userInformation ? <Redirect to='/' /> : <Login />}
               </Route>
 
               <Route exact path='/create'>
                 {userInformation ? <Redirect to='/' /> : <Signup />}
+              </Route>
+
+              <Route path='/:id?'>
+                <>
+                  <Navigation />
+                  <Main />
+                  <Footer />
+                </>
               </Route>
             </>
           )}

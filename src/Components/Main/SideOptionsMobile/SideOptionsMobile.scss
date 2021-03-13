@@ -19,10 +19,9 @@
     justify-content: space-around;
     flex-wrap: wrap;
     .Type {
-      background-color: #292929;
       cursor: pointer;
       width: 100px;
-      color: #fff;
+      color: #292929;
       border-radius: 2px;
       h4 {
         text-align: center;
@@ -50,52 +49,51 @@
       outline: none;
     }
   }
-.ColorContainer {
+  .ColorContainer {
+    .ColorPicker {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      .color {
+        margin-left: 10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        cursor: pointer;
+      }
 
-  .ColorPicker {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    .color {
-      margin-left: 10px;
-      width: 20px;
-      height: 20px;
-      border-radius: 50px;
-      cursor: pointer;
-    }
+      .blue {
+        background-color: blue;
+      }
 
-    .blue {
-      background-color: blue;
-    }
+      .red {
+        background-color: red;
+      }
 
-    .red {
-      background-color: red;
-    }
+      .green {
+        background-color: green;
+      }
 
-    .green {
-      background-color: green;
-    }
+      .black {
+        background-color: black;
+      }
 
-    .black {
-      background-color: black;
-    }
-
-    .orange {
-      background-color: orange;
+      .yellow {
+        background-color: orange;
+      }
     }
   }
-}
-button {
-  border: 0;
-  width: 50%;
-  height: 50px;
-  margin-top: 50px;
-  align-self: center;
-  background-color: #292929;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 2px;
-  font-weight: bold;
-}
+  button {
+    border: 0;
+    width: 50%;
+    height: 50px;
+    margin-top: 50px;
+    align-self: center;
+    background-color: #292929;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    font-weight: bold;
+  }
 }
